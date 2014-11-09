@@ -1,0 +1,9 @@
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
