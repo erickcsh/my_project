@@ -7,3 +7,12 @@ C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proye
 C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.exe
 C:\Users\Wal\Documents\Documentos TEC\II Semestre 2014\Diseño de Software\Proyecto\MyJobs\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\Usuario\Documents\Visual Studio 2013\Projects\my_project\MyJobs\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MyProjectModelStoreContainer" CdmEntityContainer="MyProjectModelContainer">
-    <EntitySetMapping Name="UserEntities">
+    <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="IsTypeOf(MyProjectModel.User)">
-        <MappingFragment StoreEntitySet="UserEntities">
+        <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />

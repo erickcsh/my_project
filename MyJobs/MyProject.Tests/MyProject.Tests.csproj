@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{39D64467-AD86-40CD-A293-C7EFA23D11B6}</ProjectGuid>
+    <ProjectGuid>{05A9368C-CC15-4DAE-AF60-820D045A346F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MyProject.Tests</RootNamespace>
@@ -104,12 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyProject\MyProject.csproj">
-      <Project>{D89AC94B-2634-4385-B296-9E4915A5BA29}</Project>
-      <Name>MyProject</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
