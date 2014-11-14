@@ -1,0 +1,12 @@
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\DataAccess.dll.config
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\DataAccess.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\DataAccess.pdb
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\EntityFramework.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\EntityFramework.xml
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\es\EntityFramework.resources.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\obj\Debug\DataAccess.dll
+c:\users\wal\documents\visual studio 2013\Projects\MyProjectDatabaseFirst\DataAccess\obj\Debug\DataAccess.pdb

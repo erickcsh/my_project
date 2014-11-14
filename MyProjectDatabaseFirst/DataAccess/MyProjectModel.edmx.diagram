@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="30e84ff2652d46cf833411868a87360c" Name="Diagram1">
+        <EntityTypeShape EntityType="MyProjectModel.Profile" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Project" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Technology" Width="1.5" PointX="7.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Tecnologies_X_Profile" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.User" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.User_Type" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="MyProjectModel.FK_Profile_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Tecnologies_X_Profile_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Project_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Project_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Tecnologies_X_Profile_Technology" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_User_User_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

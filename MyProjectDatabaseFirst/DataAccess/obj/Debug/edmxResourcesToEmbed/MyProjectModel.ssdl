@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FK_User" Type="int" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FK_Company" Type="int" Nullable="false" />
+    <Property Name="FK_Freenlancer" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Technology">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tecnologies_X_Profile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FK_Profile" Type="int" Nullable="false" />
+    <Property Name="FK_Technology" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FK_User_Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Type_Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Profile_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Profile" Type="Self.Profile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Profile">
+        <PropertyRef Name="FK_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="FK_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="FK_Freenlancer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tecnologies_X_Profile_Profile">
+    <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
+    <End Role="Tecnologies_X_Profile" Type="Self.Tecnologies_X_Profile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profile">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tecnologies_X_Profile">
+        <PropertyRef Name="FK_Profile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tecnologies_X_Profile_Technology">
+    <End Role="Technology" Type="Self.Technology" Multiplicity="1" />
+    <End Role="Tecnologies_X_Profile" Type="Self.Tecnologies_X_Profile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technology">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tecnologies_X_Profile">
+        <PropertyRef Name="FK_Technology" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User_Type">
+    <End Role="User_Type" Type="Self.User_Type" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="FK_User_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyProjectModelStoreContainer">
+    <EntitySet Name="Profile" EntityType="Self.Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Technology" EntityType="Self.Technology" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tecnologies_X_Profile" EntityType="Self.Tecnologies_X_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Type" EntityType="Self.User_Type" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Profile_User" Association="Self.FK_Profile_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Profile" EntitySet="Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_User" Association="Self.FK_Project_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_User1" Association="Self.FK_Project_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tecnologies_X_Profile_Profile" Association="Self.FK_Tecnologies_X_Profile_Profile">
+      <End Role="Profile" EntitySet="Profile" />
+      <End Role="Tecnologies_X_Profile" EntitySet="Tecnologies_X_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tecnologies_X_Profile_Technology" Association="Self.FK_Tecnologies_X_Profile_Technology">
+      <End Role="Technology" EntitySet="Technology" />
+      <End Role="Tecnologies_X_Profile" EntitySet="Tecnologies_X_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User_Type" Association="Self.FK_User_User_Type">
+      <End Role="User_Type" EntitySet="User_Type" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
