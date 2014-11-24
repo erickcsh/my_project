@@ -1,11 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MyProjectModelStoreContainer" CdmEntityContainer="MyProjectEntities">
+    <EntitySetMapping Name="ActiveProject">
+      <EntityTypeMapping TypeName="MyProjectModel.ActiveProject">
+        <MappingFragment StoreEntitySet="ActiveProject">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="Freelancer" ColumnName="Freelancer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AttachedFile">
+      <EntityTypeMapping TypeName="MyProjectModel.AttachedFile">
+        <MappingFragment StoreEntitySet="AttachedFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="File" ColumnName="File" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="MyProjectModel.Comments">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AttachedFile" ColumnName="AttachedFile" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Task" ColumnName="Task" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="MyProjectModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileType">
+      <EntityTypeMapping TypeName="MyProjectModel.FileType">
+        <MappingFragment StoreEntitySet="FileType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Offers">
+      <EntityTypeMapping TypeName="MyProjectModel.Offers">
+        <MappingFragment StoreEntitySet="Offers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="Freelancer" ColumnName="Freelancer" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreviousWorkLinks">
+      <EntityTypeMapping TypeName="MyProjectModel.PreviousWorkLinks">
+        <MappingFragment StoreEntitySet="PreviousWorkLinks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Profile">
       <EntityTypeMapping TypeName="MyProjectModel.Profile">
         <MappingFragment StoreEntitySet="Profile">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FK_User" ColumnName="FK_User" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfileTechnologies">
+      <EntityTypeMapping TypeName="MyProjectModel.ProfileTechnologies">
+        <MappingFragment StoreEntitySet="ProfileTechnologies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -13,8 +87,21 @@
       <EntityTypeMapping TypeName="MyProjectModel.Project">
         <MappingFragment StoreEntitySet="Project">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FK_Company" ColumnName="FK_Company" />
-          <ScalarProperty Name="FK_Freenlancer" ColumnName="FK_Freenlancer" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="SatartDate" ColumnName="SatartDate" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectRating">
+      <EntityTypeMapping TypeName="MyProjectModel.ProjectRating">
+        <MappingFragment StoreEntitySet="ProjectRating">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="CompletionAtTime" ColumnName="CompletionAtTime" />
+          <ScalarProperty Name="CompletionBudget" ColumnName="CompletionBudget" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -29,6 +116,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Task">
+      <EntityTypeMapping TypeName="MyProjectModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActiveProject" ColumnName="ActiveProject" />
+          <ScalarProperty Name="TaskRate" ColumnName="TaskRate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskState">
+      <EntityTypeMapping TypeName="MyProjectModel.TaskState">
+        <MappingFragment StoreEntitySet="TaskState">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Reprobate" ColumnName="Reprobate" />
+          <ScalarProperty Name="Incomplete" ColumnName="Incomplete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Technology">
       <EntityTypeMapping TypeName="MyProjectModel.Technology">
         <MappingFragment StoreEntitySet="Technology">
@@ -37,30 +146,50 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Tecnologies_X_Profile">
-      <EntityTypeMapping TypeName="MyProjectModel.Tecnologies_X_Profile">
-        <MappingFragment StoreEntitySet="Tecnologies_X_Profile">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FK_Profile" ColumnName="FK_Profile" />
-          <ScalarProperty Name="FK_Technology" ColumnName="FK_Technology" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="MyProjectModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FK_User_Type" ColumnName="FK_User_Type" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="User_Type">
-      <EntityTypeMapping TypeName="MyProjectModel.User_Type">
-        <MappingFragment StoreEntitySet="User_Type">
+    <EntitySetMapping Name="UserType">
+      <EntityTypeMapping TypeName="MyProjectModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+          <ScalarProperty Name="UserType1" ColumnName="UserType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="INSERT_PROFILETECNOLOGIES" FunctionName="MyProjectModel.Store.INSERT_PROFILETECNOLOGIES" />
+    <FunctionImportMapping FunctionImportName="INSERT_USER" FunctionName="MyProjectModel.Store.INSERT_USER" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MyProjectModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MyProjectModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MyProjectModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MyProjectModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyProjectModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MyProjectModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyProjectModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MyProjectModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MyProjectModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

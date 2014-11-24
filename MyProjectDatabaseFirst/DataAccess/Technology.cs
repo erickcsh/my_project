@@ -16,12 +16,12 @@ namespace DataAccess
     {
         public Technology()
         {
-            this.Tecnologies_X_Profile = new HashSet<Tecnologies_X_Profile>();
+            this.ProfileTechnologies = new HashSet<ProfileTechnologies>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
     
-        public virtual ICollection<Tecnologies_X_Profile> Tecnologies_X_Profile { get; set; }
+        public virtual ICollection<ProfileTechnologies> ProfileTechnologies { get; set; }
     }
 }

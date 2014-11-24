@@ -4,19 +4,38 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="30e84ff2652d46cf833411868a87360c" Name="Diagram1">
-        <EntityTypeShape EntityType="MyProjectModel.Profile" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.Project" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.Technology" Width="1.5" PointX="7.625" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.Tecnologies_X_Profile" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.User" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyProjectModel.User_Type" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <AssociationConnector Association="MyProjectModel.FK_Profile_User" ManuallyRouted="false" />
-        <AssociationConnector Association="MyProjectModel.FK_Tecnologies_X_Profile_Profile" ManuallyRouted="false" />
+      <Diagram DiagramId="6bc95ac3855a4e739d12a7b4c267e5e8" Name="Diagram1">
+        <EntityTypeShape EntityType="MyProjectModel.ActiveProject" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.AttachedFile" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Comments" Width="1.5" PointX="12" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Country" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.FileType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Offers" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.PreviousWorkLinks" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Profile" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.ProfileTechnologies" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Project" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.ProjectRating" Width="1.5" PointX="7.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Task" Width="1.5" PointX="9.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.TaskState" Width="1.5" PointX="7.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.Technology" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.User" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyProjectModel.UserType" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="MyProjectModel.FK_ActiveProject_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Task_ActiveProject" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Comments_AttachedFile" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Comments_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Profile_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Offers_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Offers_User" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_PreviousWorkLinks_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Profile_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_ProfileTechnologies_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_ProfileTechnologies_Technology" ManuallyRouted="false" />
         <AssociationConnector Association="MyProjectModel.FK_Project_User" ManuallyRouted="false" />
-        <AssociationConnector Association="MyProjectModel.FK_Project_User1" ManuallyRouted="false" />
-        <AssociationConnector Association="MyProjectModel.FK_Tecnologies_X_Profile_Technology" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_ProjectRating_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="MyProjectModel.FK_Task_Task_Rate" ManuallyRouted="false" />
         <AssociationConnector Association="MyProjectModel.FK_User_User_Type" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

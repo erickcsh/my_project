@@ -16,13 +16,20 @@ namespace DataAccess
     {
         public Profile()
         {
-            this.Tecnologies_X_Profile = new HashSet<Tecnologies_X_Profile>();
+            this.PreviousWorkLinks = new HashSet<PreviousWorkLinks>();
+            this.ProfileTechnologies = new HashSet<ProfileTechnologies>();
         }
     
         public int Id { get; set; }
-        public Nullable<int> FK_User { get; set; }
+        public int User { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Description { get; set; }
+        public int Country { get; set; }
+        public byte[] Picture { get; set; }
     
-        public virtual User User { get; set; }
-        public virtual ICollection<Tecnologies_X_Profile> Tecnologies_X_Profile { get; set; }
+        public virtual Country Country1 { get; set; }
+        public virtual ICollection<PreviousWorkLinks> PreviousWorkLinks { get; set; }
+        public virtual User User1 { get; set; }
+        public virtual ICollection<ProfileTechnologies> ProfileTechnologies { get; set; }
     }
 }

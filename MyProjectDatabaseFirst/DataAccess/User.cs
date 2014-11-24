@@ -16,17 +16,20 @@ namespace DataAccess
     {
         public User()
         {
+            this.Offers = new HashSet<Offers>();
             this.Profile = new HashSet<Profile>();
             this.Project = new HashSet<Project>();
-            this.Project1 = new HashSet<Project>();
         }
     
         public int Id { get; set; }
-        public int FK_User_Type { get; set; }
+        public int User_Type { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Name { get; set; }
     
+        public virtual ICollection<Offers> Offers { get; set; }
         public virtual ICollection<Profile> Profile { get; set; }
         public virtual ICollection<Project> Project { get; set; }
-        public virtual ICollection<Project> Project1 { get; set; }
-        public virtual User_Type User_Type { get; set; }
+        public virtual UserType UserType { get; set; }
     }
 }

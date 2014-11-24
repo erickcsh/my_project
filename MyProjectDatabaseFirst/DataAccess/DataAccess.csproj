@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0866B6FA-1FAD-426D-B3A0-D19895B0A9DF}</ProjectGuid>
+    <ProjectGuid>{F3E99B26-6F4A-4C21-8212-D443BE5CE2A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccess</RootNamespace>
@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -48,7 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ActiveProject.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttachedFile.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comments.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FileType.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="MyProjectModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,37 +82,57 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyProjectModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Offers.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PreviousWorkLinks.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileTechnologies.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Project.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProjectRating.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs">
+      <DependentUpon>MyProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskState.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Technology.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tecnologies_X_Profile.cs">
-      <DependentUpon>MyProjectModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="User_Type.cs">
+    <Compile Include="UserRepository\UserRepository.cs" />
+    <Compile Include="UserType.cs">
       <DependentUpon>MyProjectModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="MyProjectModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MyProjectModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="MyProjectModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MyProjectModel.edmx</DependentUpon>

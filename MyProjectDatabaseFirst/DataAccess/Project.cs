@@ -14,11 +14,23 @@ namespace DataAccess
     
     public partial class Project
     {
-        public int Id { get; set; }
-        public int FK_Company { get; set; }
-        public int FK_Freenlancer { get; set; }
+        public Project()
+        {
+            this.ActiveProject = new HashSet<ActiveProject>();
+            this.Offers = new HashSet<Offers>();
+            this.ProjectRating = new HashSet<ProjectRating>();
+        }
     
+        public int Id { get; set; }
+        public int Company { get; set; }
+        public string Description { get; set; }
+        public System.DateTime EndDate { get; set; }
+        public System.DateTime SatartDate { get; set; }
+        public double Budget { get; set; }
+    
+        public virtual ICollection<ActiveProject> ActiveProject { get; set; }
+        public virtual ICollection<Offers> Offers { get; set; }
         public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
+        public virtual ICollection<ProjectRating> ProjectRating { get; set; }
     }
 }
