@@ -12,7 +12,12 @@ namespace MyProject.Controllers
 {
     public class ProfileController : Controller
     {
-        private MyProjectEntities db = new MyProjectEntities();
+        private MyProjectEntities db;
+
+        public ProfileController(MyProjectEntities dataBase)
+        {
+            this.db = dataBase;
+        }
 
         // GET: /Profile/
         public ActionResult Index()
@@ -59,7 +64,7 @@ namespace MyProject.Controllers
             if (ModelState.IsValid)
             {
                 db.Profile.Add(profile);
-                //db.User.Add(user);
+                db.User.Add(user);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

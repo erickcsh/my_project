@@ -20,12 +20,12 @@ namespace DataAccess
             this.ProfileTechnologies = new HashSet<ProfileTechnologies>();
         }
     
-        public int Id { get; set; }
-        public int User { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Description { get; set; }
-        public int Country { get; set; }
-        public byte[] Picture { get; set; }
+        public virtual int Id { get; set; }
+        public virtual int User { get; set; }
+        public virtual string PhoneNumber { get; set; }
+        public virtual string Description { get; set; }
+        public virtual int Country { get; set; }
+        public virtual byte[] Picture { get; set; }
     
         public virtual Country Country1 { get; set; }
         public virtual ICollection<PreviousWorkLinks> PreviousWorkLinks { get; set; }

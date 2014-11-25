@@ -19,8 +19,8 @@ namespace DataAccess
             this.User = new HashSet<User>();
         }
     
-        public int Id { get; set; }
-        public string UserType1 { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string UserType1 { get; set; }
     
         public virtual ICollection<User> User { get; set; }
     }

@@ -12,8 +12,7 @@ namespace MyProject.Controllers
 {
     public class UserController : Controller
     {
-        //private MyProjectEntities db = new MyProjectEntities();
-        public DataAccess.UserRepository db = new DataAccess.UserRepository();
+        private MyProjectEntities db = new MyProjectEntities();
 
         // GET: /User/
         public ActionResult Index()
